@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
+<rect width="100%" height="100%" fill="white"/>
+<text x="85" y="28" font-size="18" font-family="sans-serif">Mean prediction-set size</text>
+<line x1="85" y1="55" x2="85" y2="395" stroke="black"/><line x1="85" y1="395" x2="725" y2="395" stroke="black"/>
+<text x="8" y="399.0" font-size="11" font-family="sans-serif">0.000</text>
+<text x="8" y="314.0" font-size="11" font-family="sans-serif">0.484</text>
+<text x="8" y="229.0" font-size="11" font-family="sans-serif">0.968</text>
+<text x="8" y="144.0" font-size="11" font-family="sans-serif">1.452</text>
+<text x="8" y="59.0" font-size="11" font-family="sans-serif">1.936</text>
+<text x="77.0" y="415" font-size="11" font-family="sans-serif">5</text>
+<text x="110.7" y="415" font-size="11" font-family="sans-serif">10</text>
+<text x="178.1" y="415" font-size="11" font-family="sans-serif">20</text>
+<text x="380.2" y="415" font-size="11" font-family="sans-serif">50</text>
+<text x="717.0" y="415" font-size="11" font-family="sans-serif">100</text>
+<text x="295.0" y="448" font-size="13" font-family="sans-serif">rare-class calibration count</text><text x="18" y="230.0" transform="rotate(-90 18 230.0)" font-size="13" font-family="sans-serif">labels</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.5" points="85.0,57.0 118.7,223.3 186.1,223.0 388.2,224.4 725.0,223.9"/>
+<circle cx="85.0" cy="57.0" r="3.5" fill="#1f77b4"/>
+<circle cx="118.7" cy="223.3" r="3.5" fill="#1f77b4"/>
+<circle cx="186.1" cy="223.0" r="3.5" fill="#1f77b4"/>
+<circle cx="388.2" cy="224.4" r="3.5" fill="#1f77b4"/>
+<circle cx="725.0" cy="223.9" r="3.5" fill="#1f77b4"/>
+<text x="515" y="55" font-size="12" font-family="sans-serif" fill="#1f77b4">independent_mondrian</text>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2.5" points="85.0,225.1 118.7,223.7 186.1,223.9 388.2,225.6 725.0,225.4"/>
+<circle cx="85.0" cy="225.1" r="3.5" fill="#ff7f0e"/>
+<circle cx="118.7" cy="223.7" r="3.5" fill="#ff7f0e"/>
+<circle cx="186.1" cy="223.9" r="3.5" fill="#ff7f0e"/>
+<circle cx="388.2" cy="225.6" r="3.5" fill="#ff7f0e"/>
+<circle cx="725.0" cy="225.4" r="3.5" fill="#ff7f0e"/>
+<text x="515" y="77" font-size="12" font-family="sans-serif" fill="#ff7f0e">ordinal_cluster</text>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2.5" points="85.0,55.5 118.7,55.0 186.1,221.5 388.2,222.0 725.0,223.0"/>
+<circle cx="85.0" cy="55.5" r="3.5" fill="#2ca02c"/>
+<circle cx="118.7" cy="55.0" r="3.5" fill="#2ca02c"/>
+<circle cx="186.1" cy="221.5" r="3.5" fill="#2ca02c"/>
+<circle cx="388.2" cy="222.0" r="3.5" fill="#2ca02c"/>
+<circle cx="725.0" cy="223.0" r="3.5" fill="#2ca02c"/>
+<text x="515" y="99" font-size="12" font-family="sans-serif" fill="#2ca02c">linear_structured_final_mondrian</text>
+</svg>
