@@ -1,182 +1,93 @@
 # Proposed Method Theory
 
-**Status:** Research scaffold / theorem not yet established
-**Method version:** TBD
+**Status:** v0.3 candidate theorem/proof contract; not an established theorem
+**Candidate version:** Assumption-Based Adaptive Ordinal Borrowing v0.3
 
-This document records the theoretical target and proof obligations for the proposed ordinal-aware calibration method.
+## Scope and data roles
 
-It must not be read as claiming a theorem that has not yet been proved.
+Let \(Y\in\{0,\ldots,K-1\}\), with frozen candidate score \(S(x,k)\), and let \(F_k(t)=\Pr\{S(X,k)\le t\mid Y=k\}\). Use independent \(D_{\mathrm{train}}\), \(D_{\mathrm{str}}\), and \(D_{\mathrm{cal}}\). The predictor and score are frozen before the latter two samples. This contract requires \(D_{\mathrm{cal}}\) to be an ordinary i.i.d. population sample. A fixed-count class-stratified final calibration design is **not covered** because it changes the pooled neighborhood mixture.
 
-## 1. Setup
-
-Let
+The target is a high-probability structural-certificate statement, not exact distribution-free Mondrian validity: with probability at least \(1-\delta_{\mathrm{str}}\) over \(D_{\mathrm{str}}\), simultaneously for every class \(k\),
 
 \[
-(X,Y)
+\Pr\{Y_{n+1}\in C(X_{n+1})\mid Y_{n+1}=k,D_{\mathrm{str}}\}\ge1-\alpha,
 \]
 
-be an observation with ordinal label
+where the inner probability is over i.i.d. final calibration and test data.
+
+## Structural DKW certificate
+
+For structural class count \(m_k>0\), set
 
 \[
-Y\in\mathcal Y=\{0,\ldots,K-1\}.
+e_k=\min\left\{1,\sqrt{\frac{\log(2K/\delta_{\mathrm{str}})}{2m_k}}\right\};
 \]
 
-Let a fitted predictive procedure define a candidate-wise score
+for \(m_k=0\), set \(e_k=1\). Zero support is not excluded: it supplies an uninformative certificate and suppresses borrowing.
+
+For supported pairs,
 
 \[
-S(x,k).
+\widehat d_{jk}=\sup_t|\widehat F_j^{\mathrm{str}}(t)-\widehat F_k^{\mathrm{str}}(t)|,
+\quad U_{jk}^{\mathrm{direct}}=\min\{1,\widehat d_{jk}+e_j+e_k\}.
 \]
 
-All predictive-model training, validation-based checkpoint selection, score design, structural hyperparameters, and method-selection choices must be frozen before canonical conformal calibration.
-
-Let \(\mathcal F\) denote the information used to construct this frozen procedure.
-
-The exact contents of \(\mathcal F\) must be specified once the proposed method is finalized.
-
-## 2. Target theorem
-
-The primary target is a finite-sample class-conditional statement of the form
+If either class is unsupported, use \(U_{jk}^{\mathrm{direct}}=1\). For adjacent classes let \(d_r^U=U_{r,r+1}^{\mathrm{direct}}\), and define
 
 \[
-\Pr\{Y_{n+1}\in C(X_{n+1})
-\mid
-\mathcal F,Y_{n+1}=k\}
-\ge1-lpha
+U_{jk}^{\mathrm{path}}=\begin{cases}0,&j=k,\\
+\min\{1,\sum_{r=\min(j,k)}^{\max(j,k)-1}d_r^U\},&j\ne k.\end{cases}
 \]
 
-for every ordinal class \(k\).
+The tightened certificate is \(\Delta_{jk}^{U}=\min\{U_{jk}^{\mathrm{direct}},U_{jk}^{\mathrm{path}}\}\). Direct KS comparisons only tighten certificates; borrowing neighborhoods remain ordinal.
 
-A marginal label-conditional statement would then follow by averaging over the fitted procedure when justified.
+## Frozen adaptive neighborhood
 
-## 3. Baseline validity reference point
+For \(\mathcal G_k(h)=\{j:|j-k|\le h\}\), define \(\epsilon_{k,h}^{U}=\max_{j\in\mathcal G_k(h)}\Delta_{kj}^{U}\). On the simultaneous structural event,
 
-Independent true-label Mondrian split conformal obtains class-wise validity by calibrating class \(k\) with exchangeable scores from the same class.
+\begin{equation}
+\left\|F_{k,h}^{\mathrm{mix}}-F_k\right\|_{\infty}\le\epsilon_{k,h}^{U}.
+\label{eq:mixture_ks_bound}
+\end{equation}
 
-Conceptually, for class \(k\), the relevant calibration sequence and test score are exchangeable conditional on the frozen procedure and the test label.
-
-This independent construction provides the reference validity argument that the proposed method must match or appropriately generalize.
-
-## 4. Central theoretical obstacle
-
-The proposed research seeks to use information from neighboring ordinal classes.
-
-However, scores drawn from different labels are generally not exchangeable with the class-\(k\) test score conditional on \(Y_{n+1}=k\).
-
-Therefore, simply adding neighboring-class scores to the class-\(k\) calibration sample does not inherit the standard Mondrian rank argument.
-
-This is the core proof obstacle.
-
-## 5. Invalidity risks to analyze
-
-The theory should explicitly analyze why the following generic operations are not automatically valid:
-
-- pooled neighboring-class calibration;
-- smoothed class-specific thresholds;
-- weighted empirical quantiles using other classes;
-- data-dependent selection of ordinal neighborhoods;
-- threshold shrinkage toward nearby classes.
-
-A valid method may eventually use one of these ideas only if an additional construction or assumption restores the desired guarantee.
-
-## 6. Candidate routes to validity
-
-The following are research directions, not established results.
-
-### 6.1 Conservative augmentation
-
-Neighboring information may be used to choose a threshold only if the resulting threshold can be shown to dominate a valid class-specific conformal threshold in a direction that preserves coverage.
-
-The efficiency implications would need separate analysis.
-
-### 6.2 Hierarchical or nested calibration
-
-A structured family of ordinal groups may allow multiple valid conformal statements to be combined.
-
-The final candidate rule would need to prove that the class-specific event remains covered after any group selection or intersection/union operation.
-
-### 6.3 Sample splitting for adaptive structure
-
-One subset of data might choose a neighborhood or structural parameter while an independent calibration subset performs the final conformal calibration.
-
-This may preserve validity at the cost of calibration efficiency.
-
-### 6.4 Simultaneous or multiple-calibration construction
-
-It may be possible to construct several valid candidate thresholds and combine them using a rule that preserves class-wise coverage.
-
-Any multiplicity or selection effect must be accounted for.
-
-### 6.5 Assumption-based borrowing
-
-Efficiency results may require an explicit assumption linking neighboring class score distributions, such as stochastic ordering, smoothness, or bounded distributional change.
-
-An assumption alone does not replace the finite-sample validity proof.
-
-## 7. Required assumptions
-
-The final theorem must state precisely which assumptions are needed.
-
-Candidates include:
-
-- independence of training/validation from calibration/test;
-- within-class exchangeability;
-- fixed ordinal class ordering;
-- fixed score function conditional on \(\mathcal F\);
-- any additional structural relationship between neighboring score distributions;
-- independence required by any data-adaptive neighborhood selection.
-
-Do not silently assume calibration/test exchangeability for chronological solar-flare experiments.
-
-## 8. Efficiency target
-
-A stronger theoretical result should compare the proposed method with independent Mondrian calibration.
-
-Possible quantities include:
+Using structural proportions, plan
 
 \[
-\mathbb E[|C(X)|],
+N_{k,h}^{\mathrm{plan}}=n_{\mathrm{cal}}\sum_{j\in\mathcal G_k(h)}\widehat\pi_j^{\mathrm{str}},
+\qquad \Psi_{k,h}=\epsilon_{k,h}^{U}+\frac1{N_{k,h}^{\mathrm{plan}}+1}.
 \]
 
-expected ordinal span,
+Choose \(h_k^\star=\arg\min_{h\in\mathcal H_k}\Psi_{k,h}\), with deterministic smallest-radius tie breaking, and reject at minimum radii with \(\epsilon_{k,h}^{U}\ge\alpha\). This objective is a design heuristic, not a theoretically optimal rule. Selection must be frozen before final calibration score values are observed.
 
-class-specific expected set size,
+## Certified pooled calibration
 
-or required calibration support to achieve a finite informative threshold.
+Let \(\mathcal G_k^\star=\mathcal G_k(h_k^\star)\), \(\epsilon_k^\star=\epsilon_{k,h_k^\star}^{U}\), and pool final scores with labels in \(\mathcal G_k^\star\). Let realized pooled support be \(N_k^\star\). If \(\epsilon_k^\star\ge\alpha\), set \(q_k=+\infty\). Otherwise set
 
-Potential efficiency assumptions should be stated separately from the assumptions required only for coverage validity.
+\[
+r_k^\star=\left\lceil(N_k^\star+1)(1-\alpha+\epsilon_k^\star)\right\rceil.
+\]
 
-## 9. Synthetic validation
+If \(r_k^\star>N_k^\star\), set \(q_k=+\infty\); otherwise use the corresponding pooled order statistic. Then \(C(x)=\{k:S(x,k)\le q_k\}\). For integer \(N_k^\star\), an equivalent finite-threshold condition is
 
-Once a candidate theorem is proposed, the synthetic data generator should mirror its assumptions.
+\[
+\alpha-\epsilon_k^\star\ge\frac1{N_k^\star+1}.
+\]
 
-The simulation should test:
+## Candidate theorem and proof audit
 
-- exact or conservative per-class coverage;
-- finite-sample behavior at small class counts;
-- rare-class thresholds;
-- regimes with strong neighbor similarity;
-- regimes where neighboring distributions differ sharply;
-- failure modes when structural assumptions are violated.
+Use a real manuscript theorem environment: `\begin{theorem}[Certified class-conditional coverage under adaptive ordinal borrowing]\label{thm:adaptive_ordinal_coverage}`.
 
-Empirical coverage is not a substitute for proof, but it should detect implementation errors and expose assumption sensitivity.
+The proof must first condition on \(D_{\mathrm{str}}\), the frozen neighborhood, and the random pooled count \(N_k^\star=n\). Under i.i.d. population sampling, the selected \(n\) pooled scores are i.i.d. from \(F_{k,h_k^\star}^{\mathrm{mix}}\), and a new mixture score has that law. The rank argument gives mixture coverage at least \(1-\alpha+\epsilon_k^\star\); then average over \(N_k^\star\). Do **not** condition on the entire vector of per-class pooled counts and claim mixture-i.i.d. exchangeability.
 
-## 10. Proof checklist
+Transfer with
 
-Before claiming finite-sample class-conditional coverage, verify:
+\begin{equation}
+F_k(t)\ge F_{k,h_k^\star}^{\mathrm{mix}}(t)-\epsilon_k^\star.
+\label{eq:class_mix_lower}
+\end{equation}
 
-1. What objects are random after conditioning on \(\mathcal F\)?
-2. Which calibration scores are exchangeable with the class-\(k\) test score?
-3. Does the ordinal borrowing rule introduce data-dependent selection?
-4. If so, is that selection independent of the final conformal ranks?
-5. What is the exact finite-sample rank rule?
-6. How are ties handled?
-7. What happens for zero or very small class support?
-8. Does any post-processing only add labels?
-9. Is the theorem conditional on additional structural assumptions?
-10. Does the implementation match every proof step?
+Thus \(\mathbb E[F_{k,h_k^\star}^{\mathrm{mix}}(q_k)]\ge1-\alpha+\epsilon_k^\star\) implies \(\mathbb E[F_k(q_k)]\ge1-\alpha\).
 
-## 11. Current theory status
+## Historical exclusions and validation
 
-No ordinal-aware cross-class calibration rule has yet been shown here to preserve the target class-conditional guarantee.
-
-The current theoretical contribution is therefore an identified problem and proof target, not an established method theorem.
+Class-constant additive residual thresholds are an established NO-GO by translation equivariance. The affine input-dependent ordinal model is an ordinal-specific NO-GO: its gain was generic conditional adaptation. v0.3 is a new candidate, not a promotion of either result. Synthetic validation must measure certificates, true KS distances, selected radii, pooled support, finite-threshold rates, and coverage before any canonical method is frozen.
