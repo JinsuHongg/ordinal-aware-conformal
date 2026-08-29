@@ -1,0 +1,47 @@
+{
+  "study": "structural_sample_sensitivity_v0_3",
+  "method_version": "candidate-v0.3-unchanged",
+  "scenario": "strong_smoothness",
+  "means": [
+    0.5,
+    0.505,
+    0.51,
+    0.515,
+    0.52
+  ],
+  "sigma": 0.2,
+  "n_classes": 5,
+  "alpha": 0.1,
+  "delta_str": 0.05,
+  "class_probabilities": [
+    0.3,
+    0.25,
+    0.22,
+    0.2,
+    0.03
+  ],
+  "rare_class": 4,
+  "n_cal": 200,
+  "n_test": 100000,
+  "structural_sizes": [
+    500,
+    1000,
+    2000,
+    5000,
+    10000,
+    20000,
+    50000
+  ],
+  "repetitions": 100,
+  "seed": 20260828,
+  "final_calibration_sampling": "ordinary i.i.d. population sample; not fixed-count or stratified",
+  "coupling": "within a repetition, calibration and test draws are shared across n_str; each n_str receives an independent structural draw",
+  "candidate_radii": [
+    0,
+    1,
+    2
+  ],
+  "score": "unchanged direct true-label Normal score generator",
+  "config_hash": "11e951560519f16d2e7b627108ccecdecec45332a90bc732b0aa887dd721e90a",
+  "code_commit": "d4bd30f01e09145c9f7a17a382b99fe48dd8a26d"
+}

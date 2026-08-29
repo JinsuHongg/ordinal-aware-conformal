@@ -275,3 +275,15 @@ The frozen input-dependent threshold study found useful generic conditional adap
 The new candidate is Assumption-Based Adaptive Ordinal Borrowing. It uses an independent structural sample to build simultaneous DKW certificates, freezes ordinal borrowing neighborhoods before final score values are observed, and pools i.i.d. final calibration scores with a certified miscoverage penalty. Direct KS comparisons only tighten ordinal-path certificates.
 
 The candidate theorem is a high-probability structural-certificate guarantee, not exact distribution-free Mondrian validity. It requires ordinary i.i.d. population final calibration; fixed-count class-stratified final calibration is outside the current proof. The next action is theorem-aligned synthetic validation, not implementation promotion, real-data experiments, or a canonical `proposed_method.md`.
+
+## 2026-08-28
+
+### Structural-certificate sensitivity: certificate too conservative
+
+The adaptive borrowing mechanism remains a GO. The current global DKW/KS
+structural certificate is the bottleneck and should be refined without changing
+the core borrowing construction.  In the frozen strong-smoothness synthetic
+scenario with a 3% rare class, positive-radius borrowing was never admissible
+through (n_{m str}=20{,}000), and became active only around 50,000
+structural observations.  The next research step is to develop a sharper
+structural certificate while preserving v0.3's ordinal borrowing mechanism.

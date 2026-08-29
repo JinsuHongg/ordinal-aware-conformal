@@ -1,0 +1,77 @@
+{
+  "study": "synthetic_adaptive_ordinal_borrowing_v0_3",
+  "method_version": "candidate-v0.3",
+  "n_classes": 5,
+  "alpha": 0.1,
+  "delta_str": 0.05,
+  "rare_class": 4,
+  "class_probabilities": [
+    0.3,
+    0.25,
+    0.22,
+    0.2,
+    0.03
+  ],
+  "calibration_sizes": [
+    200,
+    400,
+    800,
+    1600
+  ],
+  "structural_size": 50000,
+  "test_size": 100000,
+  "repetitions": 100,
+  "seed": 20260828,
+  "score": "direct true-label S | Y=k ~ Normal(mu_k, 0.20^2); no candidate-class scores",
+  "final_calibration_sampling": "ordinary i.i.d. population sample; not fixed-count or stratified",
+  "candidate_radii": [
+    0,
+    1,
+    2
+  ],
+  "fixed_pool_radius": 1,
+  "scenarios": {
+    "strong_smoothness": {
+      "means": [
+        0.5,
+        0.505,
+        0.51,
+        0.515,
+        0.52
+      ],
+      "sigma": 0.2
+    },
+    "moderate_smoothness": {
+      "means": [
+        0.5,
+        0.535,
+        0.57,
+        0.605,
+        0.64
+      ],
+      "sigma": 0.2
+    },
+    "local_discontinuity": {
+      "means": [
+        0.5,
+        0.505,
+        0.51,
+        0.8,
+        0.805
+      ],
+      "sigma": 0.2
+    },
+    "no_ordinal_structure": {
+      "means": [
+        0.5,
+        1.1,
+        0.46,
+        1.2,
+        0.4
+      ],
+      "sigma": 0.2
+    }
+  },
+  "config_hash": "7823f390c51fd4a7b1d649ef94fb607ab8eb353f3e6dc165e3bd3e6a677139b3",
+  "code_commit": "d4bd30f01e09145c9f7a17a382b99fe48dd8a26d"
+}

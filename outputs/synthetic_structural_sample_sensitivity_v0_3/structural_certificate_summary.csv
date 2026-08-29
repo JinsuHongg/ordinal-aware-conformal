@@ -1,0 +1,8 @@
+n_str,pairwise_certificate_coverage,simultaneous_certificate_coverage,structural_certificate_failures,empirical_structural_failure_probability
+500,1,1.0,0,0.0
+1000,1,1.0,0,0.0
+2000,1,1.0,0,0.0
+5000,1,1.0,0,0.0
+10000,1,1.0,0,0.0
+20000,1,1.0,0,0.0
+50000,1,1.0,0,0.0
