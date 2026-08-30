@@ -1,0 +1,27 @@
+{
+  "study": "guarded_local_certificate_v0_1_feasibility",
+  "alpha": 0.1,
+  "delta_str": 0.05,
+  "n_cal": 200,
+  "n_classes": 5,
+  "probability_floors": [
+    0.7,
+    0.8,
+    0.85,
+    0.9
+  ],
+  "structural_sizes": [
+    500,
+    1000,
+    2000,
+    5000,
+    10000,
+    20000,
+    50000
+  ],
+  "repetitions": 100,
+  "seed": 20260828,
+  "scenario": "strong_smoothness",
+  "per_direction_failure": 0.005,
+  "local_bound": "Reeve (2024) Corollary 3, beta=2, both CDF directions"
+}

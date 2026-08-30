@@ -287,3 +287,46 @@ scenario with a 3% rare class, positive-radius borrowing was never admissible
 through (n_{m str}=20{,}000), and became active only around 50,000
 structural observations.  The next research step is to develop a sharper
 structural certificate while preserving v0.3's ordinal borrowing mechanism.
+
+## 2026-08-29
+
+### Final decision: cross-class ordinal conformal borrowing branch stopped
+
+\[
+\boxed{\text{Ordinal CP borrowing branch: STOP}}
+\]
+
+Cross-class ordinal conformal borrowing was explored through a sequence of
+theory audits and controlled synthetic studies. The branch is stopped because
+the exact-guarantee routes were too sample-inefficient, and the approximate
+routes did not establish a sufficiently distinct ordinal contribution.
+
+Reasons recorded by the completed research artifacts:
+
+1. Class-constant structured calibration cancels exactly after additive
+   classwise residual Mondrian correction.
+2. Input-dependent structured calibration escaped that cancellation but did
+   not show meaningful ordinal-specific gains over non-ordinal conditioning.
+3. Exact cross-class borrowing required conservative structural certification:
+   global DKW/KS was too conservative, direct two-sample KS remained too
+   conservative, and guarded local certification improved the scale but still
+   required substantial structural support.
+4. Direct target-threshold certification was valid but was dominated by a
+   total-budget-matched direct target-class PAC baseline.
+5. Approximate ordinal borrowing recovered finite rare-class thresholds with
+   small explicit coverage slack.
+6. The local-path refinement fixed the global-\(L\) artifact and behaved
+   correctly under local discontinuities.
+7. The final novelty stress test found that Ding-style contiguous clustered
+   conformal often made the same practical borrowing decisions, while generic
+   directional borrowing matched or dominated local-path borrowing. The
+   ordinal path restriction acted mainly as an interpretability/regularization
+   constraint rather than a demonstrated statistical advantage.
+
+Therefore, further refinement of cross-class ordinal conformal borrowing is
+not currently justified. Do not continue path-penalty refinement, begin
+edge-cost estimation, add another structural certificate, or attempt another
+exact-recovery calibration layer.
+
+All associated theory, experiments, code, tests, outputs, and negative
+results remain preserved in this repository as a research archive.

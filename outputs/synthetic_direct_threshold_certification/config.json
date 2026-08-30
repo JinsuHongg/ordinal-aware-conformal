@@ -1,0 +1,40 @@
+{
+  "study": "direct_class_conditional_threshold_certification",
+  "alpha": 0.1,
+  "target_coverage": 0.9,
+  "delta_cert": 0.05,
+  "delta_k": 0.01,
+  "n_classes": 5,
+  "probabilities": [
+    0.3,
+    0.25,
+    0.22,
+    0.2,
+    0.03
+  ],
+  "scenario": "strong_smoothness",
+  "target_class": 4,
+  "fixed_neighborhood": [
+    3,
+    4
+  ],
+  "n_prop": 200,
+  "n_cert_grid": [
+    1000,
+    2000,
+    5000,
+    10000,
+    20000
+  ],
+  "taus": [
+    0.9,
+    0.93,
+    0.95,
+    0.97
+  ],
+  "repetitions": 100,
+  "seed": 20260828,
+  "candidate_rule": "ceil((N+1)*tau) pooled proposal order statistic; +infinity if rank>N",
+  "certification_rule": "one-sided Clopper-Pearson lower bound, accept if L>=0.90",
+  "direct_pac_rule": "smallest target-score order statistic whose one-sided Clopper-Pearson lower bound is >=0.90"
+}

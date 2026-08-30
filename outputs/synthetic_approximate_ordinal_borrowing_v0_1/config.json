@@ -1,0 +1,28 @@
+{
+  "study": "approximate_ordinal_class_conditional_v0_1",
+  "alpha": 0.1,
+  "probabilities": [
+    0.3,
+    0.25,
+    0.22,
+    0.2,
+    0.03
+  ],
+  "calibration_sizes": [
+    200,
+    400,
+    800,
+    1600
+  ],
+  "slacks": [
+    0.0,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "repetitions": 100,
+  "seed": 20260828,
+  "final_calibration": "ordinary iid population sampling",
+  "lipschitz_constant": "true minimal global directional L in each synthetic scenario",
+  "selection": "largest population-mixture-weighted slack-admissible ordinal radius"
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440">
+<rect width="100%" height="100%" fill="white"/>
+<text x="80" y="28" font-size="18" font-family="sans-serif">Class 3--4 admissibility</text>
+<line x1="80" y1="45" x2="80" y2="375" stroke="black"/><line x1="80" y1="375" x2="725" y2="375" stroke="black"/>
+<text x="68.0" y="393" font-size="10" font-family="sans-serif">500</text>
+<text x="165.1" y="393" font-size="10" font-family="sans-serif">1000</text>
+<text x="262.2" y="393" font-size="10" font-family="sans-serif">2000</text>
+<text x="390.5" y="393" font-size="10" font-family="sans-serif">5000</text>
+<text x="487.6" y="393" font-size="10" font-family="sans-serif">10000</text>
+<text x="584.7" y="393" font-size="10" font-family="sans-serif">20000</text>
+<text x="713.0" y="393" font-size="10" font-family="sans-serif">50000</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.5" points="80.0,375.0 177.1,375.0 274.2,375.0 402.5,375.0 499.6,375.0 596.7,375.0 725.0,55.0"/>
+<circle cx="80.0" cy="375.0" r="3" fill="#1f77b4"/>
+<circle cx="177.1" cy="375.0" r="3" fill="#1f77b4"/>
+<circle cx="274.2" cy="375.0" r="3" fill="#1f77b4"/>
+<circle cx="402.5" cy="375.0" r="3" fill="#1f77b4"/>
+<circle cx="499.6" cy="375.0" r="3" fill="#1f77b4"/>
+<circle cx="596.7" cy="375.0" r="3" fill="#1f77b4"/>
+<circle cx="725.0" cy="55.0" r="3" fill="#1f77b4"/>
+<text x="510" y="55" font-size="12" font-family="sans-serif" fill="#1f77b4">DKW</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2.5" points="80.0,375.0 177.1,375.0 274.2,375.0 402.5,375.0 499.6,375.0 596.7,375.0 725.0,45.0"/>
+<circle cx="80.0" cy="375.0" r="3" fill="#d62728"/>
+<circle cx="177.1" cy="375.0" r="3" fill="#d62728"/>
+<circle cx="274.2" cy="375.0" r="3" fill="#d62728"/>
+<circle cx="402.5" cy="375.0" r="3" fill="#d62728"/>
+<circle cx="499.6" cy="375.0" r="3" fill="#d62728"/>
+<circle cx="596.7" cy="375.0" r="3" fill="#d62728"/>
+<circle cx="725.0" cy="45.0" r="3" fill="#d62728"/>
+<text x="510" y="73" font-size="12" font-family="sans-serif" fill="#d62728">two-sample</text>
+<text x="280.0" y="430" font-size="12" font-family="sans-serif">structural sample size (log scale)</text>
+<text x="16" y="220.0" transform="rotate(-90 16 220.0)" font-size="12" font-family="sans-serif">P(U_34 < alpha)</text>
+</svg>

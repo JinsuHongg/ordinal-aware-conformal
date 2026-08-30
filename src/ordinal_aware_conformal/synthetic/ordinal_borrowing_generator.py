@@ -20,6 +20,9 @@ SCENARIOS = {
     "moderate_smoothness": Scenario("moderate_smoothness", (0.50, 0.535, 0.570, 0.605, 0.640), 0.20),
     "local_discontinuity": Scenario("local_discontinuity", (0.50, 0.505, 0.510, 0.80, 0.805), 0.20),
     "no_ordinal_structure": Scenario("no_ordinal_structure", (0.50, 1.10, 0.46, 1.20, 0.40), 0.20),
+    # Class 0 matches rare target class 4, while adjacent class 3 is a poorer
+    # donor.  This is used only for the oracle novelty falsification study.
+    "nonordinal_favorable_donor": Scenario("nonordinal_favorable_donor", (0.520, 0.90, 0.35, 0.40, 0.520), 0.20),
 }
 
 

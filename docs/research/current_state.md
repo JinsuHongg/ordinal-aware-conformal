@@ -1,7 +1,28 @@
 # Current Research State
 
-**Last updated:** 2026-08-28
-**Status:** Candidate v0.3 ready for synthetic validation; canonical proposed method remains unfixed
+**Last updated:** 2026-08-29
+**Status:** Research archive; cross-class ordinal conformal borrowing branch stopped
+
+## Final Status — Ordinal CP Borrowing Branch Stopped
+
+Cross-class ordinal conformal borrowing was extensively explored. The main
+branches were discontinued because exact guarantees led to severe
+sample-efficiency costs, while approximate borrowing showed limited novelty
+relative to existing clustered conformal methods.
+
+Exact class-conditional borrowing was tested through residual calibration,
+structural DKW/KS and two-sample certificates, guarded local certificates, and
+independent threshold certification; each exact-recovery route imposed severe
+rare-class support or certification costs. Approximate ordinal borrowing did
+recover finite rare-class thresholds, and local paths removed the global-
+\(L\) artifact, but novelty stress testing found substantial overlap with
+Ding-style clustered conformal and no clear statistical advantage over generic
+directional borrowing. Further work on path penalties, edge-cost estimation,
+DKW/KS certification, or additional borrowing certificates is stopped.
+
+All experiments, implementations, tests, outputs, and intermediate decisions
+are preserved as historical research records. This repository is retained as a
+research archive; it is not being deleted or GitHub-archived.
 
 ## Current primary direction
 
