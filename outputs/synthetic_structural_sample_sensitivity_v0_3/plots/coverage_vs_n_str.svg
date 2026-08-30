@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
+<rect width="100%" height="100%" fill="white"/>
+<text x="85" y="28" font-size="18" font-family="sans-serif">Class-4 coverage</text>
+<line x1="85" y1="55" x2="85" y2="395" stroke="black"/><line x1="85" y1="395" x2="725" y2="395" stroke="black"/>
+<text x="8" y="399.0" font-size="11" font-family="sans-serif">0.000</text>
+<text x="8" y="314.0" font-size="11" font-family="sans-serif">0.248</text>
+<text x="8" y="229.0" font-size="11" font-family="sans-serif">0.496</text>
+<text x="8" y="144.0" font-size="11" font-family="sans-serif">0.744</text>
+<text x="8" y="59.0" font-size="11" font-family="sans-serif">0.992</text>
+<text x="75.0" y="415" font-size="11" font-family="sans-serif">500</text>
+<text x="171.3" y="415" font-size="11" font-family="sans-serif">1000</text>
+<text x="267.7" y="415" font-size="11" font-family="sans-serif">2000</text>
+<text x="395.0" y="415" font-size="11" font-family="sans-serif">5000</text>
+<text x="491.3" y="415" font-size="11" font-family="sans-serif">10000</text>
+<text x="587.7" y="415" font-size="11" font-family="sans-serif">20000</text>
+<text x="715.0" y="415" font-size="11" font-family="sans-serif">50000</text>
+<text x="75.0" y="415" font-size="11" font-family="sans-serif">500</text>
+<text x="171.3" y="415" font-size="11" font-family="sans-serif">1000</text>
+<text x="267.7" y="415" font-size="11" font-family="sans-serif">2000</text>
+<text x="395.0" y="415" font-size="11" font-family="sans-serif">5000</text>
+<text x="491.3" y="415" font-size="11" font-family="sans-serif">10000</text>
+<text x="587.7" y="415" font-size="11" font-family="sans-serif">20000</text>
+<text x="715.0" y="415" font-size="11" font-family="sans-serif">50000</text>
+<text x="75.0" y="415" font-size="11" font-family="sans-serif">500</text>
+<text x="171.3" y="415" font-size="11" font-family="sans-serif">1000</text>
+<text x="267.7" y="415" font-size="11" font-family="sans-serif">2000</text>
+<text x="395.0" y="415" font-size="11" font-family="sans-serif">5000</text>
+<text x="491.3" y="415" font-size="11" font-family="sans-serif">10000</text>
+<text x="587.7" y="415" font-size="11" font-family="sans-serif">20000</text>
+<text x="715.0" y="415" font-size="11" font-family="sans-serif">50000</text>
+<text x="288.0" y="448" font-size="13" font-family="sans-serif">structural sample size (log scale)</text><text x="18" y="230.0" transform="rotate(-90 18 230.0)" font-size="13" font-family="sans-serif">coverage</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.5" points="85.0,56.9 181.3,56.9 277.7,56.9 405.0,56.9 501.3,56.9 597.7,56.9 725.0,56.9"/>
+<circle cx="85.0" cy="56.9" r="3.5" fill="#1f77b4"/>
+<circle cx="181.3" cy="56.9" r="3.5" fill="#1f77b4"/>
+<circle cx="277.7" cy="56.9" r="3.5" fill="#1f77b4"/>
+<circle cx="405.0" cy="56.9" r="3.5" fill="#1f77b4"/>
+<circle cx="501.3" cy="56.9" r="3.5" fill="#1f77b4"/>
+<circle cx="597.7" cy="56.9" r="3.5" fill="#1f77b4"/>
+<circle cx="725.0" cy="56.9" r="3.5" fill="#1f77b4"/>
+<text x="515" y="55" font-size="12" font-family="sans-serif" fill="#1f77b4">Mondrian</text>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2.5" points="85.0,56.9 181.3,56.9 277.7,56.9 405.0,56.9 501.3,56.9 597.7,56.9 725.0,85.0"/>
+<circle cx="85.0" cy="56.9" r="3.5" fill="#ff7f0e"/>
+<circle cx="181.3" cy="56.9" r="3.5" fill="#ff7f0e"/>
+<circle cx="277.7" cy="56.9" r="3.5" fill="#ff7f0e"/>
+<circle cx="405.0" cy="56.9" r="3.5" fill="#ff7f0e"/>
+<circle cx="501.3" cy="56.9" r="3.5" fill="#ff7f0e"/>
+<circle cx="597.7" cy="56.9" r="3.5" fill="#ff7f0e"/>
+<circle cx="725.0" cy="85.0" r="3.5" fill="#ff7f0e"/>
+<text x="515" y="77" font-size="12" font-family="sans-serif" fill="#ff7f0e">Approximate</text>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2.5" points="85.0,56.9 181.3,56.9 277.7,56.9 405.0,56.9 501.3,56.9 597.7,56.9 725.0,55.0"/>
+<circle cx="85.0" cy="56.9" r="3.5" fill="#2ca02c"/>
+<circle cx="181.3" cy="56.9" r="3.5" fill="#2ca02c"/>
+<circle cx="277.7" cy="56.9" r="3.5" fill="#2ca02c"/>
+<circle cx="405.0" cy="56.9" r="3.5" fill="#2ca02c"/>
+<circle cx="501.3" cy="56.9" r="3.5" fill="#2ca02c"/>
+<circle cx="597.7" cy="56.9" r="3.5" fill="#2ca02c"/>
+<circle cx="725.0" cy="55.0" r="3.5" fill="#2ca02c"/>
+<text x="515" y="99" font-size="12" font-family="sans-serif" fill="#2ca02c">Certified</text>
+</svg>

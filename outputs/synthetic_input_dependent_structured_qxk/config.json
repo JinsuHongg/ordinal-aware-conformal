@@ -1,0 +1,33 @@
+{
+  "study": "exploratory_synthetic_input_dependent_structured_qxk",
+  "method_version": "exploratory-frozen-input-dependent-v1",
+  "n_classes": 5,
+  "alpha": 0.1,
+  "rare_class": 0,
+  "rare_counts": [
+    100,
+    50,
+    20,
+    10,
+    5
+  ],
+  "other_class_calibration_count": 100,
+  "structured_training_size": 4000,
+  "class_probabilities": [
+    0.05,
+    0.2375,
+    0.2375,
+    0.2375,
+    0.2375
+  ],
+  "ordinal_embedding_step": 0.6,
+  "score": "S(x,k)=|z-0.60*k|; z=0.60*Y+Normal(0,sigma(x,Y))",
+  "sigma": "0.09+0.38*x+0.035*k+0.018*x*k",
+  "preliminary_model": "Gaussian-quantile-scaled least-squares [1,x,k,x*k] fit on independent structured-training data",
+  "calibration": "full class-specific residual Mondrian; no calibration observations used to fit preliminary model",
+  "repetitions": 50,
+  "test_size": 10000,
+  "seed": 20260828,
+  "config_hash": "2f3e79a5442f1fb68ff314949a1d574a2680d786df7260baa78ccf0428eb3081",
+  "code_commit": "7c6c4ab81f1b6acf2c82bba8d2b4c5a87459f2f0"
+}

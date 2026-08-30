@@ -1,0 +1,35 @@
+{
+  "alpha": 0.1,
+  "probabilities": [
+    0.3,
+    0.25,
+    0.22,
+    0.2,
+    0.03
+  ],
+  "scenarios": [
+    "strong_smoothness",
+    "moderate_smoothness",
+    "local_discontinuity",
+    "no_ordinal_structure",
+    "nonordinal_favorable_donor"
+  ],
+  "slacks": [
+    0.0,
+    0.005,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "calibration_sizes": [
+    200,
+    400,
+    800,
+    1600
+  ],
+  "repetitions": 100,
+  "seed": 20260828,
+  "final_calibration": "ordinary iid population sampling",
+  "oracle_information": true,
+  "ding_penalty": "maximum pairwise symmetric KS within target's contiguous ball"
+}

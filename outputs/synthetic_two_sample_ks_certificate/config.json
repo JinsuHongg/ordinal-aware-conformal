@@ -1,0 +1,30 @@
+{
+  "study": "direct_two_sample_ks_certificate_comparison",
+  "scenario": "strong_smoothness",
+  "n_classes": 5,
+  "alpha": 0.1,
+  "delta_str": 0.05,
+  "pairwise_delta": 0.005,
+  "class_probabilities": [
+    0.3,
+    0.25,
+    0.22,
+    0.2,
+    0.03
+  ],
+  "structural_sizes": [
+    500,
+    1000,
+    2000,
+    5000,
+    10000,
+    20000,
+    50000
+  ],
+  "repetitions": 100,
+  "seed": 20260828,
+  "true_ks": "exact equal-variance normal-location formula",
+  "two_sample_bound": "Underwood and Paillusson (2024) Proposition 2b / equation (11), numerically inverted",
+  "config_hash": "220e31c672f51b7bec6a2c878f0e8633d6a8b57e77c438267c19c4481ee773e6",
+  "code_commit": "c24c71bdc8c6029faabf516477dfb654e32b339e"
+}

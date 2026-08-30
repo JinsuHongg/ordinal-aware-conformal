@@ -1,0 +1,23 @@
+{
+  "study": "exploratory_input_dependent_robustness",
+  "scenario": "A_well_specified",
+  "alpha": 0.1,
+  "n_classes": 5,
+  "rare_counts": [
+    100,
+    50,
+    20,
+    10,
+    5
+  ],
+  "other_class_calibration_count": 100,
+  "structured_training_size": 4000,
+  "test_size": 5000,
+  "repetitions": 50,
+  "seed": 20260829,
+  "ordinal_embedding_step": 0.6,
+  "ordinal_model": "4 parameters [1,x,k,x*k]",
+  "nonordinal_model": "10 parameters: separate [1,x] per class",
+  "calibration": "full class-specific exact residual Mondrian; preliminary fits use independent structured-training data only",
+  "config_hash": "04158589710892501722c24c49d74ff6e7c3e391bc6d5374560f6907c10cccdb"
+}

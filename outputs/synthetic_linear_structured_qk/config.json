@@ -1,0 +1,32 @@
+{
+  "study": "exploratory_minimal_synthetic_linear_structured_qk",
+  "method_version": "exploratory-hard-split-v1",
+  "n_classes": 5,
+  "alpha": 0.1,
+  "rare_class": 0,
+  "rare_counts": [
+    100,
+    50,
+    20,
+    10,
+    5
+  ],
+  "other_class_calibration_count": 100,
+  "class_probabilities": [
+    0.05,
+    0.2375,
+    0.2375,
+    0.2375,
+    0.2375
+  ],
+  "base_noise": 0.18,
+  "adjacent_noise_change": 0.045,
+  "structured_final_split": "stratified floor-half / remainder",
+  "cluster_radius": 1,
+  "repetitions": 50,
+  "test_size": 10000,
+  "seed": 20260827,
+  "score": "S(x,k)=|z-k|; z=Y+Normal(0,sigma_Y)",
+  "config_hash": "8830586a83347f62e25e96fff86f8a87f6bb86f15451228d1263ea50773aed37",
+  "code_commit": "d36f6b6d356dfd8decf868e4eebc7835d54ba692"
+}

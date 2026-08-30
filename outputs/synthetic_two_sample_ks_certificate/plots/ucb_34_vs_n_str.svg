@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440">
+<rect width="100%" height="100%" fill="white"/>
+<text x="80" y="28" font-size="18" font-family="sans-serif">Class 3--4 certificates</text>
+<line x1="80" y1="45" x2="80" y2="375" stroke="black"/><line x1="80" y1="375" x2="725" y2="375" stroke="black"/>
+<text x="68.0" y="393" font-size="10" font-family="sans-serif">500</text>
+<text x="165.1" y="393" font-size="10" font-family="sans-serif">1000</text>
+<text x="262.2" y="393" font-size="10" font-family="sans-serif">2000</text>
+<text x="390.5" y="393" font-size="10" font-family="sans-serif">5000</text>
+<text x="487.6" y="393" font-size="10" font-family="sans-serif">10000</text>
+<text x="584.7" y="393" font-size="10" font-family="sans-serif">20000</text>
+<text x="713.0" y="393" font-size="10" font-family="sans-serif">50000</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.5" points="80.0,45.0 177.1,146.8 274.2,211.5 402.5,270.9 499.6,302.4 596.7,322.3 725.0,342.0"/>
+<circle cx="80.0" cy="45.0" r="3" fill="#1f77b4"/>
+<circle cx="177.1" cy="146.8" r="3" fill="#1f77b4"/>
+<circle cx="274.2" cy="211.5" r="3" fill="#1f77b4"/>
+<circle cx="402.5" cy="270.9" r="3" fill="#1f77b4"/>
+<circle cx="499.6" cy="302.4" r="3" fill="#1f77b4"/>
+<circle cx="596.7" cy="322.3" r="3" fill="#1f77b4"/>
+<circle cx="725.0" cy="342.0" r="3" fill="#1f77b4"/>
+<text x="510" y="55" font-size="12" font-family="sans-serif" fill="#1f77b4">DKW</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2.5" points="80.0,63.9 177.1,161.8 274.2,222.2 402.5,277.6 499.6,307.1 596.7,325.6 725.0,344.1"/>
+<circle cx="80.0" cy="63.9" r="3" fill="#d62728"/>
+<circle cx="177.1" cy="161.8" r="3" fill="#d62728"/>
+<circle cx="274.2" cy="222.2" r="3" fill="#d62728"/>
+<circle cx="402.5" cy="277.6" r="3" fill="#d62728"/>
+<circle cx="499.6" cy="307.1" r="3" fill="#d62728"/>
+<circle cx="596.7" cy="325.6" r="3" fill="#d62728"/>
+<circle cx="725.0" cy="344.1" r="3" fill="#d62728"/>
+<text x="510" y="73" font-size="12" font-family="sans-serif" fill="#d62728">two-sample</text>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2.5" points="80.0,371.1 177.1,371.1 274.2,371.1 402.5,371.1 499.6,371.1 596.7,371.1 725.0,371.1"/>
+<circle cx="80.0" cy="371.1" r="3" fill="#2ca02c"/>
+<circle cx="177.1" cy="371.1" r="3" fill="#2ca02c"/>
+<circle cx="274.2" cy="371.1" r="3" fill="#2ca02c"/>
+<circle cx="402.5" cy="371.1" r="3" fill="#2ca02c"/>
+<circle cx="499.6" cy="371.1" r="3" fill="#2ca02c"/>
+<circle cx="596.7" cy="371.1" r="3" fill="#2ca02c"/>
+<circle cx="725.0" cy="371.1" r="3" fill="#2ca02c"/>
+<text x="510" y="91" font-size="12" font-family="sans-serif" fill="#2ca02c">true KS</text>
+<text x="280.0" y="430" font-size="12" font-family="sans-serif">structural sample size (log scale)</text>
+<text x="16" y="220.0" transform="rotate(-90 16 220.0)" font-size="12" font-family="sans-serif">mean UCB</text>
+</svg>

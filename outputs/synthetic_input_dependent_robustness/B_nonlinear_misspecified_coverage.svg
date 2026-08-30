@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="460"><rect width="100%" height="100%" fill="white"/><text x="80" y="28" font-size="18">Rare-class coverage</text><line x1="80" y1="55" x2="80" y2="395" stroke="black"/><line x1="80" y1="395" x2="780" y2="395" stroke="black"/>
+<text x="72.0" y="415" font-size="11">5</text>
+<text x="108.8" y="415" font-size="11">10</text>
+<text x="182.5" y="415" font-size="11">20</text>
+<text x="403.6" y="415" font-size="11">50</text>
+<text x="772.0" y="415" font-size="11">100</text>
+<text x="320.0" y="448" font-size="13">rare calibration support</text><text x="18" y="230.0" transform="rotate(-90 18 230.0)" font-size="13">coverage</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2" points="80.0,55.0 116.8,85.7 190.5,83.7 411.6,92.2 780.0,86.8"/><text x="490" y="54" font-size="11" fill="#1f77b4">independent_mondrian</text>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2" points="80.0,68.4 116.8,70.6 190.5,67.9 411.6,72.9 780.0,75.5"/><text x="490" y="73" font-size="11" fill="#ff7f0e">ordinal_cluster</text>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2" points="80.0,55.0 116.8,82.0 190.5,86.1 411.6,93.5 780.0,89.6"/><text x="490" y="92" font-size="11" fill="#2ca02c">input_dependent_nonordinal</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2" points="80.0,55.0 116.8,83.2 190.5,85.8 411.6,92.3 780.0,89.4"/><text x="490" y="111" font-size="11" fill="#d62728">input_dependent_ordinal</text>
+</svg>
